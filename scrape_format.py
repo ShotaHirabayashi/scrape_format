@@ -31,10 +31,6 @@ def get_all_time():
     except: 
         print('error')
 
-
-
-
-
 #dfはcsv化するためのデータの形にする
 df = pd.DataFrame()
 # numpy用のリスト
