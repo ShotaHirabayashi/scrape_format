@@ -39,7 +39,6 @@ def get_all_time():
 df = pd.DataFrame()
 # numpy用のリスト
 dmyList =[]
-
 #webdriverがURLを開く先を指定する
 chrome = webdriver.Chrome()
 
@@ -47,6 +46,7 @@ chrome = webdriver.Chrome()
 for _ in range(3):
     try:
         chrome.get("")
+        # ログイン用
         chrome.find_element_by_class_name('')
         chrome.find_element_by_xpath('//*[@id="pwd"]').send_keys('')
         chrome.find_element_by_xpath('//*[@id="login"]').click()
@@ -62,6 +62,7 @@ for _ in range(3):
 
 
     except:
+        # 処理中にエラー10秒後に再起
         time.sleep(10)
     # エラーなしで成功
     else:
